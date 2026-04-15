@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Вероника Коржова</title>
 
   <style>
@@ -13,133 +13,164 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(180deg, #faf8fc 0%, #f4f1f8 100%);
-      color: #6d6678;
+      background:
+        radial-gradient(circle at top left, #f3effa 0%, transparent 35%),
+        radial-gradient(circle at top right, #eee8f8 0%, transparent 30%),
+        linear-gradient(180deg, #f8f6fc 0%, #f4f1f8 100%);
+      color: #5f5970;
     }
 
     .page {
-      max-width: 1040px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 42px 20px 60px;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid #eee9f4;
+    .layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .sidebar,
+    .main {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid #ebe5f3;
       border-radius: 28px;
-      box-shadow: 0 14px 34px rgba(109, 93, 138, 0.08);
-      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(100, 85, 130, 0.07);
     }
 
-    .hero {
-      padding: 54px 54px 34px;
-      background: linear-gradient(135deg, #f6f2fa 0%, #f2eef8 100%);
-      border-bottom: 1px solid #ece6f3;
+    .sidebar {
+      padding: 28px 24px;
+      position: sticky;
+      top: 22px;
     }
 
-    .hero-label {
+    .main {
+      padding: 30px;
+    }
+
+    .label {
       display: inline-block;
       padding: 8px 14px;
+      background: #f4effb;
+      color: #8472a1;
+      border: 1px solid #e8e0f2;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid #e8e0f1;
-      color: #90859f;
-      font-size: 14px;
-      margin-bottom: 16px;
+      font-size: 13px;
+      margin-bottom: 18px;
     }
 
     h1 {
       margin: 0;
-      font-size: 40px;
-      line-height: 1.1;
+      font-size: 34px;
+      line-height: 1.15;
+      color: #5e4f78;
       font-weight: 650;
-      color: #7a6d8e;
-      letter-spacing: 0.2px;
     }
 
-    .subtitle {
-      margin-top: 12px;
-      font-size: 20px;
-      color: #9a90a8;
-      line-height: 1.5;
-      max-width: 760px;
-    }
-
-    .hero-text {
-      margin-top: 22px;
-      max-width: 780px;
+    .role {
+      margin-top: 10px;
       font-size: 17px;
-      line-height: 1.85;
-      color: #736b80;
+      color: #8b7fa1;
+      line-height: 1.5;
     }
 
-    .contact-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .intro {
+      margin-top: 22px;
+      font-size: 15.8px;
+      line-height: 1.8;
+      color: #6d667d;
+    }
+
+    .contact-box {
       margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .contact-chip {
+    .contact-link {
       text-decoration: none;
-      color: #7c718c;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid #e8e1f0;
+      color: #6b5f80;
+      background: #faf8fd;
+      border: 1px solid #eee8f5;
       border-radius: 14px;
-      padding: 11px 16px;
-      font-size: 15px;
+      padding: 12px 14px;
+      font-size: 14px;
       transition: 0.2s ease;
     }
 
-    .contact-chip:hover {
-      background: #fbf9fd;
+    .contact-link:hover {
+      background: #f5f0fb;
     }
 
-    .content {
-      padding: 40px 54px 52px;
+    .small-note {
+      margin-top: 18px;
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #968ba9;
+    }
+
+    .hero {
+      padding: 6px 4px 24px;
+      border-bottom: 1px solid #eee8f5;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      line-height: 1.3;
+      color: #5b4f73;
+      font-weight: 600;
+      margin: 0 0 12px;
+    }
+
+    .hero-text {
+      font-size: 16px;
+      line-height: 1.85;
+      color: #70687f;
+      max-width: 760px;
     }
 
     .section {
-      margin-bottom: 34px;
+      margin-bottom: 24px;
     }
 
     .section:last-child {
       margin-bottom: 0;
     }
 
-    h2 {
-      margin: 0 0 14px;
-      font-size: 22px;
+    .section-title {
+      font-size: 19px;
+      color: #6b5c86;
       font-weight: 600;
-      color: #857897;
+      margin: 0 0 14px;
     }
 
-    p {
-      margin: 0;
-      font-size: 16.5px;
-      line-height: 1.8;
-      color: #766f83;
-    }
-
-    .soft-box {
-      background: #fbf9fd;
-      border: 1px solid #eee8f4;
-      border-radius: 18px;
-      padding: 22px 24px;
+    .about-card {
+      background: linear-gradient(180deg, #fcfbfe 0%, #f9f6fc 100%);
+      border: 1px solid #eee7f5;
+      border-radius: 20px;
+      padding: 20px 20px;
+      line-height: 1.85;
+      font-size: 15.8px;
+      color: #6e677c;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 6px;
     }
 
     .tag {
-      background: #f4f0f9;
-      color: #817491;
-      border: 1px solid #e9e1f1;
       padding: 10px 14px;
+      background: #f3eef9;
+      color: #76678f;
+      border: 1px solid #e7def1;
       border-radius: 999px;
       font-size: 14px;
     }
@@ -150,181 +181,203 @@
     }
 
     .project {
-      background: #fcfbfe;
-      border: 1px solid #eee8f4;
-      border-radius: 18px;
-      padding: 20px 22px;
+      background: linear-gradient(180deg, #fdfcff 0%, #faf7fd 100%);
+      border: 1px solid #ece5f3;
+      border-radius: 20px;
+      padding: 18px 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(116, 96, 145, 0.08);
     }
 
     .project-title {
-      font-size: 18px;
+      margin: 0 0 8px;
+      font-size: 17px;
+      color: #625379;
       font-weight: 600;
-      color: #837694;
-      margin-bottom: 8px;
     }
 
-    .project p {
-      font-size: 15.8px;
-      color: #787083;
+    .project-text {
+      margin: 0;
+      font-size: 15.4px;
+      line-height: 1.8;
+      color: #726b81;
     }
 
-    .grid {
+    .strengths {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 8px;
+      gap: 12px;
     }
 
-    .grid-item {
+    .strength {
       background: #fbf9fd;
-      border: 1px solid #eee8f4;
-      border-radius: 16px;
-      padding: 16px 18px;
-      font-size: 15.5px;
-      line-height: 1.7;
-      color: #777082;
+      border: 1px solid #eee7f5;
+      border-radius: 18px;
+      padding: 16px;
+      font-size: 14.8px;
+      line-height: 1.75;
+      color: #6d657b;
     }
 
-    .footer-note {
-      margin-top: 10px;
+    .footer-box {
+      background: #f8f5fb;
+      border: 1px solid #ebe4f3;
+      border-radius: 18px;
+      padding: 18px;
       font-size: 15px;
-      color: #9890a4;
+      line-height: 1.75;
+      color: #746d82;
     }
 
-    @media (max-width: 800px) {
-      .hero,
-      .content {
-        padding: 28px 22px;
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .strengths {
+        grid-template-columns: 1fr;
+      }
+
+      .main {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 18px 12px 30px;
+      }
+
+      .sidebar,
+      .main {
+        border-radius: 22px;
       }
 
       h1 {
-        font-size: 32px;
+        font-size: 29px;
       }
 
-      .subtitle {
-        font-size: 18px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
+      .hero-title {
+        font-size: 23px;
       }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="card">
-      <div class="hero">
-        <div class="hero-label">Портфолио • Разработка и работа с данными</div>
+    <div class="layout">
+
+      <aside class="sidebar">
+        <div class="label">Портфолио</div>
 
         <h1>Вероника Коржова</h1>
+        <div class="role">Разработчик ПО / Работа с данными / Аналитика</div>
 
-        <div class="subtitle">
-          Разработчик ПО / Специалист по работе с данными
+        <div class="intro">
+          Мне нравится делать решения, которые упрощают работу с информацией и помогают привести данные в понятный и удобный вид. Ближе всего мне направления, где можно совместить логику, структуру, аналитику и саму разработку.
         </div>
 
-        <div class="hero-text">
-          Мне близка работа, в которой можно соединить логику, аккуратность и удобство для людей.
-          Занимаюсь разработкой решений для обработки данных, автоматизации процессов и организации
-          информации в понятный и рабочий формат. Больше всего мне нравится, когда из разрозненных
-          данных и задач получается собрать цельную, удобную и действительно полезную систему.
+        <div class="contact-box">
+          <a class="contact-link" href="https://t.me/neechek" target="_blank">Telegram: @neechek</a>
+          <a class="contact-link" href="mailto:vkorzova7@gmail.com">vkorzova7@gmail.com</a>
         </div>
 
-        <div class="contact-row">
-          <a class="contact-chip" href="https://t.me/neechek" target="_blank">Telegram: @neechek</a>
-          <a class="contact-chip" href="mailto:vkorzova7@gmail.com">vkorzova7@gmail.com</a>
+        <div class="small-note">
+          На этой странице кратко собрана информация обо мне, моих навыках и проектах, чтобы можно было быстро понять, чем я занимаюсь и в каком направлении развиваюсь.
         </div>
-      </div>
+      </aside>
 
-      <div class="content">
-        <div class="section">
-          <h2>Обо мне</h2>
-          <div class="soft-box">
-            <p>
-              У меня есть опыт как в работе с данными, так и в создании более крупных программных решений.
-              Мне интересно не просто написать что-то технически рабочее, а сделать так, чтобы системой
-              было удобно пользоваться и чтобы она действительно упрощала процессы. Работала с табличными
-              данными, их подготовкой и структурированием, а также участвовала в проектах, где были
-              интерфейс, внутренняя логика, уведомления и организация взаимодействия между разными частями системы.
-            </p>
+      <main class="main">
+        <section class="hero">
+          <h2 class="hero-title">О себе</h2>
+          <div class="hero-text">
+            Я занимаюсь разработкой и работой с данными. Больше всего мне интересно создавать понятные и полезные решения: от обработки и подготовки информации до систем, в которых важны логика, удобство и внутренняя структура. Мне нравится не просто “сделать, чтобы работало”, а собрать всё так, чтобы этим действительно было удобно пользоваться и чтобы результат выглядел аккуратно и продуманно.
           </div>
-        </div>
+        </section>
 
-        <div class="section">
-          <h2>Навыки</h2>
+        <section class="section">
+          <h3 class="section-title">Чем я занимаюсь</h3>
+          <div class="about-card">
+            Работаю с табличными и структурированными данными, занимаюсь их очисткой, упорядочиванием и подготовкой к дальнейшему анализу. Также есть опыт разработки более крупных решений, где важно было продумать не только интерфейс, но и внутреннюю логику работы системы, взаимодействие модулей и удобство для пользователя. Мне близок подход, когда техническая часть сочетается с понятной подачей и реальной пользой.
+          </div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Навыки</h3>
           <div class="tags">
             <span class="tag">Excel</span>
             <span class="tag">Power BI</span>
             <span class="tag">SQL</span>
             <span class="tag">Python</span>
-            <span class="tag">Обработка данных</span>
+            <span class="tag">Подготовка данных</span>
+            <span class="tag">Обработка информации</span>
             <span class="tag">Автоматизация процессов</span>
             <span class="tag">Разработка приложений</span>
-            <span class="tag">Структурирование информации</span>
           </div>
-        </div>
+        </section>
 
-        <div class="section">
-          <h2>Проекты</h2>
+        <section class="section">
+          <h3 class="section-title">Проекты</h3>
           <div class="projects">
-            <div class="project">
-              <div class="project-title">DataPrep System</div>
-              <p>
-                Приложение для загрузки, очистки, обработки и подготовки табличных данных к дальнейшему анализу.
-                В этом проекте для меня было важно сделать работу с данными более понятной, аккуратной и удобной,
-                чтобы сократить ручную обработку и упростить подготовку информации.
+            <article class="project">
+              <h4 class="project-title">DataPrep System</h4>
+              <p class="project-text">
+                Проект, связанный с загрузкой, очисткой, обработкой и подготовкой табличных данных для последующего анализа. Основная идея заключалась в том, чтобы упростить работу с данными и привести их к более понятному, аккуратному и пригодному для дальнейшей аналитики виду.
               </p>
-            </div>
+            </article>
 
-            <div class="project">
-              <div class="project-title">Система для организации</div>
-              <p>
-                Один из крупных проектов, связанный с внутренними процессами организации. Включал систему
-                управления отелями, систему уведомлений и бонусную систему. Работа велась над логикой
-                взаимодействия модулей, структурой системы и тем, чтобы все элементы работали как единое решение.
+            <article class="project">
+              <h4 class="project-title">Система для организации</h4>
+              <p class="project-text">
+                Более крупный проект для организации, где была реализована система, включающая управление отелями, систему уведомлений и бонусную систему. Здесь для меня был важен не только внешний интерфейс, но и сама логика работы, структура данных и связь между разными частями системы.
               </p>
-            </div>
+            </article>
 
-            <div class="project">
-              <div class="project-title">Финансовый трекер</div>
-              <p>
-                Проект, направленный на организацию и анализ финансовых данных. Основная идея заключалась
-                в том, чтобы представить информацию в более удобном и понятном виде, упростить отслеживание
-                показателей и сделать работу с данными более наглядной.
+            <article class="project">
+              <h4 class="project-title">Финансовый трекер</h4>
+              <p class="project-text">
+                Проект по организации и анализу данных, где акцент был сделан на понятную структуру информации, удобство работы с ней и возможность отслеживать основные показатели в более наглядном виде.
               </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3 class="section-title">Что мне особенно близко в работе</h3>
+          <div class="strengths">
+            <div class="strength">
+              Люблю наводить порядок в данных и делать их более понятными, структурированными и удобными для дальнейшей работы.
+            </div>
+            <div class="strength">
+              Интересно продумывать решения, где важны и техническая часть, и то, как всё будет восприниматься пользователем.
+            </div>
+            <div class="strength">
+              Нравится сочетать аналитику, логику и разработку, чтобы в итоге получался не просто проект, а действительно полезный инструмент.
+            </div>
+            <div class="strength">
+              В работе для меня важны аккуратность, понятность, продуманность и ощущение целостности результата.
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="section">
-          <h2>Что мне особенно интересно</h2>
-          <div class="grid">
-            <div class="grid-item">
-              Находить понятный порядок в данных и превращать их в удобную рабочую систему
-            </div>
-            <div class="grid-item">
-              Делать решения, которые не перегружены, но при этом реально полезны в работе
-            </div>
-            <div class="grid-item">
-              Соединять техническую часть, логику и удобство для пользователя
-            </div>
-            <div class="grid-item">
-              Работать над проектами, где важны аккуратность, ответственность и внимание к деталям
-            </div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Контакты</h2>
-          <p>
+        <section class="section">
+          <h3 class="section-title">Контакты</h3>
+          <div class="footer-box">
             Telegram: @neechek<br>
-            Email: vkorzova7@gmail.com
-          </p>
-          <div class="footer-note">
-            На этой странице кратко собрана информация обо мне, моих навыках и проектах.
+            Email: vkorzova7@gmail.com<br><br>
+            Если будет удобно, можно перейти по QR-коду на визитке и посмотреть эту страницу в более полном виде.
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
+
     </div>
   </div>
 </body>
