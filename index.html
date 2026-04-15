@@ -6,128 +6,322 @@
   <title>Вероника Коржова</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f5f3ff, #ede9fe);
-      color: #1f1f1f;
+    * {
+      box-sizing: border-box;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #f8f7fc 0%, #f3f0f9 100%);
+      color: #2f2a36;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #ece7f4;
+      border-radius: 28px;
+      box-shadow: 0 10px 30px rgba(92, 72, 125, 0.08);
+      overflow: hidden;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f4f0fb 0%, #ece7f6 100%);
+      padding: 56px 54px 40px;
+      border-bottom: 1px solid #ebe5f3;
+    }
+
+    .hero-top {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
       background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(124, 58, 237, 0.15);
-      padding: 50px;
+      color: #6f5b8b;
+      font-size: 14px;
+      margin-bottom: 18px;
+      border: 1px solid #e8e0f2;
     }
 
     h1 {
-      margin-bottom: 5px;
-      font-size: 38px;
-      color: #5b21b6;
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.1;
+      color: #433654;
+      font-weight: 700;
     }
 
     .subtitle {
+      margin-top: 12px;
       font-size: 20px;
-      color: #6b7280;
-      margin-bottom: 30px;
+      color: #6d617d;
+      line-height: 1.5;
+      max-width: 760px;
+    }
+
+    .hero-text {
+      margin-top: 24px;
+      max-width: 760px;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #4f475a;
+    }
+
+    .hero-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-contacts a {
+      text-decoration: none;
+      color: #5a4a70;
+      background: #ffffff;
+      border: 1px solid #e6deef;
+      padding: 11px 16px;
+      border-radius: 14px;
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+
+    .hero-contacts a:hover {
+      background: #f8f5fc;
+    }
+
+    .content {
+      padding: 42px 54px 52px;
+    }
+
+    .section {
+      margin-bottom: 38px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
     }
 
     h2 {
-      margin-top: 35px;
+      margin: 0 0 16px;
       font-size: 22px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 8px;
-      color: #4c1d95;
+      color: #4a3c5d;
+      font-weight: 650;
     }
 
     p {
-      font-size: 17px;
-      line-height: 1.7;
+      margin: 0;
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: #4f475a;
+    }
+
+    .about-box {
+      background: #faf8fc;
+      border: 1px solid #eee8f5;
+      border-radius: 18px;
+      padding: 22px 24px;
     }
 
     .tags {
-      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
     }
 
     .tag {
-      display: inline-block;
-      background: #ede9fe;
-      color: #5b21b6;
-      padding: 8px 14px;
-      margin: 6px 6px 0 0;
+      background: #f1ecf8;
+      color: #5f4e77;
+      padding: 10px 14px;
       border-radius: 999px;
       font-size: 14px;
+      border: 1px solid #e7def2;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
     }
 
     .project {
-      margin-bottom: 18px;
+      background: #fcfbfe;
+      border: 1px solid #ece6f4;
+      border-radius: 18px;
+      padding: 20px 22px;
     }
 
-    .project strong {
-      color: #5b21b6;
+    .project-title {
+      font-size: 18px;
+      font-weight: 650;
+      color: #4b3c61;
+      margin-bottom: 8px;
     }
 
-    .contact {
+    .project p {
+      font-size: 15.8px;
+      color: #575061;
+    }
+
+    .strengths {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
       margin-top: 8px;
-      color: #374151;
     }
 
-    @media (max-width: 700px) {
-      .container {
-        margin: 20px;
-        padding: 25px;
+    .strength-item {
+      background: #faf8fc;
+      border: 1px solid #eee8f5;
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: #51495d;
+    }
+
+    .footer-note {
+      margin-top: 10px;
+      font-size: 15px;
+      color: #746a81;
+    }
+
+    @media (max-width: 800px) {
+      .hero,
+      .content {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .strengths {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
-
 <body>
+  <div class="page">
+    <div class="card">
+      <div class="hero">
+        <div class="hero-top">Портфолио • Разработка и аналитика</div>
 
-<div class="container">
-  <h1>Вероника Коржова</h1>
-  <div class="subtitle">Разработчик ПО / Специалист по работе с данными</div>
+        <h1>Вероника Коржова</h1>
 
-  <h2>Обо мне</h2>
-  <p>
-    Занимаюсь разработкой программных решений для обработки данных и автоматизации рабочих процессов.
-    Есть опыт создания как систем для анализа и подготовки данных, так и более крупных проектов
-    с интерфейсом, внутренней логикой, уведомлениями и организацией работы пользователей.
-  </p>
+        <div class="subtitle">
+          Разработчик ПО / Специалист по работе с данными
+        </div>
 
-  <h2>Навыки</h2>
-  <div class="tags">
-    <span class="tag">Excel</span>
-    <span class="tag">Power BI</span>
-    <span class="tag">SQL</span>
-    <span class="tag">Python</span>
-    <span class="tag">Работа с данными</span>
-    <span class="tag">Разработка приложений</span>
+        <div class="hero-text">
+          Занимаюсь разработкой программных решений для обработки данных, автоматизации рабочих процессов
+          и организации удобной работы с информацией. Интересуюсь как практической разработкой приложений,
+          так и аналитическим направлением, связанным с подготовкой, структурированием и визуализацией данных.
+        </div>
+
+        <div class="hero-contacts">
+          <a href="https://t.me/neechek" target="_blank">Telegram: @neechek</a>
+          <a href="mailto:vkorzova7@gmail.com">vkorzova7@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="section">
+          <h2>Обо мне</h2>
+          <div class="about-box">
+            <p>
+              Имею опыт работы с табличными данными, их очисткой, структурированием и подготовкой к дальнейшему анализу.
+              Также участвовала в разработке более крупных систем с интерфейсной частью, внутренней логикой,
+              уведомлениями и организацией рабочих процессов. Для меня важно создавать решения, которые не просто работают,
+              а действительно делают работу с данными и системой понятнее и удобнее.
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Навыки</h2>
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">Обработка данных</span>
+            <span class="tag">Автоматизация процессов</span>
+            <span class="tag">Разработка приложений</span>
+            <span class="tag">Аналитическое мышление</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Проекты</h2>
+          <div class="projects">
+            <div class="project">
+              <div class="project-title">DataPrep System</div>
+              <p>
+                Приложение для загрузки, очистки, обработки и подготовки табличных данных для дальнейшего анализа.
+                Проект ориентирован на упрощение работы с данными и их приведение к удобному и структурированному виду.
+              </p>
+            </div>
+
+            <div class="project">
+              <div class="project-title">Система для организации</div>
+              <p>
+                Комплексный проект, связанный с автоматизацией внутренних процессов организации. Включал систему
+                управления отелями, систему уведомлений и бонусную систему, а также работу с логикой взаимодействия
+                между отдельными модулями.
+              </p>
+            </div>
+
+            <div class="project">
+              <div class="project-title">Финансовый трекер</div>
+              <p>
+                Проект, направленный на обработку и анализ данных с удобной структурой информации, позволяющей
+                отслеживать основные показатели и упрощать работу с финансовыми данными.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Что могу предложить</h2>
+          <div class="strengths">
+            <div class="strength-item">
+              Подготовка и обработка данных для дальнейшего анализа и визуализации
+            </div>
+            <div class="strength-item">
+              Разработка удобных решений для автоматизации повседневных рабочих задач
+            </div>
+            <div class="strength-item">
+              Организация информации в понятную и структурированную систему
+            </div>
+            <div class="strength-item">
+              Комбинирование технической части, логики и удобного пользовательского представления
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Контакты</h2>
+          <p>
+            Telegram: @neechek<br>
+            Email: vkorzova7@gmail.com
+          </p>
+          <div class="footer-note">
+            Подробнее о моём опыте и проектах можно узнать по этой странице или через QR-код на визитке.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <h2>Проекты</h2>
-
-  <div class="project">
-    <strong>DataPrep System</strong><br>
-    Приложение для загрузки, очистки и подготовки табличных данных для анализа.
-  </div>
-
-  <div class="project">
-    <strong>Система для организации </strong><br>
-    Комплексная система управления отелями, уведомлениями и бонусной системой внутри организации.
-  </div>
-
-  <div class="project">
-    <strong>Финансовый трекер</strong><br>
-    Проект для обработки и анализа данных с удобной структурой информации.
-  </div>
-
-  <h2>Контакты</h2>
-  <p class="contact">Telegram: @neechek</p>
-  <p class="contact">Email: vkorzova7@gmail.com</p>
-
-</div>
-
 </body>
 </html>
