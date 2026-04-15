@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Вероника Коржова</title>
 
   <style>
@@ -13,93 +13,94 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(180deg, #f8f7fc 0%, #f3f0f9 100%);
-      color: #2f2a36;
+      background: linear-gradient(180deg, #faf8fc 0%, #f4f1f8 100%);
+      color: #6d6678;
     }
 
     .page {
       max-width: 1040px;
       margin: 0 auto;
-      padding: 40px 20px 60px;
+      padding: 42px 20px 60px;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid #ece7f4;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid #eee9f4;
       border-radius: 28px;
-      box-shadow: 0 10px 30px rgba(92, 72, 125, 0.08);
+      box-shadow: 0 14px 34px rgba(109, 93, 138, 0.08);
       overflow: hidden;
     }
 
     .hero {
-      background: linear-gradient(135deg, #f4f0fb 0%, #ece7f6 100%);
-      padding: 56px 54px 40px;
-      border-bottom: 1px solid #ebe5f3;
+      padding: 54px 54px 34px;
+      background: linear-gradient(135deg, #f6f2fa 0%, #f2eef8 100%);
+      border-bottom: 1px solid #ece6f3;
     }
 
-    .hero-top {
+    .hero-label {
       display: inline-block;
-      padding: 8px 16px;
+      padding: 8px 14px;
       border-radius: 999px;
-      background: #ffffff;
-      color: #6f5b8b;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid #e8e0f1;
+      color: #90859f;
       font-size: 14px;
-      margin-bottom: 18px;
-      border: 1px solid #e8e0f2;
+      margin-bottom: 16px;
     }
 
     h1 {
       margin: 0;
-      font-size: 42px;
+      font-size: 40px;
       line-height: 1.1;
-      color: #433654;
-      font-weight: 700;
+      font-weight: 650;
+      color: #7a6d8e;
+      letter-spacing: 0.2px;
     }
 
     .subtitle {
       margin-top: 12px;
       font-size: 20px;
-      color: #6d617d;
+      color: #9a90a8;
       line-height: 1.5;
       max-width: 760px;
     }
 
     .hero-text {
-      margin-top: 24px;
-      max-width: 760px;
+      margin-top: 22px;
+      max-width: 780px;
       font-size: 17px;
-      line-height: 1.8;
-      color: #4f475a;
+      line-height: 1.85;
+      color: #736b80;
     }
 
-    .hero-contacts {
+    .contact-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 26px;
     }
 
-    .hero-contacts a {
+    .contact-chip {
       text-decoration: none;
-      color: #5a4a70;
-      background: #ffffff;
-      border: 1px solid #e6deef;
-      padding: 11px 16px;
+      color: #7c718c;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #e8e1f0;
       border-radius: 14px;
+      padding: 11px 16px;
       font-size: 15px;
       transition: 0.2s ease;
     }
 
-    .hero-contacts a:hover {
-      background: #f8f5fc;
+    .contact-chip:hover {
+      background: #fbf9fd;
     }
 
     .content {
-      padding: 42px 54px 52px;
+      padding: 40px 54px 52px;
     }
 
     .section {
-      margin-bottom: 38px;
+      margin-bottom: 34px;
     }
 
     .section:last-child {
@@ -107,22 +108,22 @@
     }
 
     h2 {
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       font-size: 22px;
-      color: #4a3c5d;
-      font-weight: 650;
+      font-weight: 600;
+      color: #857897;
     }
 
     p {
       margin: 0;
       font-size: 16.5px;
       line-height: 1.8;
-      color: #4f475a;
+      color: #766f83;
     }
 
-    .about-box {
-      background: #faf8fc;
-      border: 1px solid #eee8f5;
+    .soft-box {
+      background: #fbf9fd;
+      border: 1px solid #eee8f4;
       border-radius: 18px;
       padding: 22px 24px;
     }
@@ -135,66 +136,65 @@
     }
 
     .tag {
-      background: #f1ecf8;
-      color: #5f4e77;
+      background: #f4f0f9;
+      color: #817491;
+      border: 1px solid #e9e1f1;
       padding: 10px 14px;
       border-radius: 999px;
       font-size: 14px;
-      border: 1px solid #e7def2;
     }
 
     .projects {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 14px;
     }
 
     .project {
       background: #fcfbfe;
-      border: 1px solid #ece6f4;
+      border: 1px solid #eee8f4;
       border-radius: 18px;
       padding: 20px 22px;
     }
 
     .project-title {
       font-size: 18px;
-      font-weight: 650;
-      color: #4b3c61;
+      font-weight: 600;
+      color: #837694;
       margin-bottom: 8px;
     }
 
     .project p {
       font-size: 15.8px;
-      color: #575061;
+      color: #787083;
     }
 
-    .strengths {
+    .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
       margin-top: 8px;
     }
 
-    .strength-item {
-      background: #faf8fc;
-      border: 1px solid #eee8f5;
+    .grid-item {
+      background: #fbf9fd;
+      border: 1px solid #eee8f4;
       border-radius: 16px;
       padding: 16px 18px;
       font-size: 15.5px;
       line-height: 1.7;
-      color: #51495d;
+      color: #777082;
     }
 
     .footer-note {
       margin-top: 10px;
       font-size: 15px;
-      color: #746a81;
+      color: #9890a4;
     }
 
     @media (max-width: 800px) {
       .hero,
       .content {
-        padding: 30px 22px;
+        padding: 28px 22px;
       }
 
       h1 {
@@ -205,7 +205,7 @@
         font-size: 18px;
       }
 
-      .strengths {
+      .grid {
         grid-template-columns: 1fr;
       }
     }
@@ -215,7 +215,7 @@
   <div class="page">
     <div class="card">
       <div class="hero">
-        <div class="hero-top">Портфолио • Разработка и аналитика</div>
+        <div class="hero-label">Портфолио • Разработка и работа с данными</div>
 
         <h1>Вероника Коржова</h1>
 
@@ -224,26 +224,28 @@
         </div>
 
         <div class="hero-text">
-          Занимаюсь разработкой программных решений для обработки данных, автоматизации рабочих процессов
-          и организации удобной работы с информацией. Интересуюсь как практической разработкой приложений,
-          так и аналитическим направлением, связанным с подготовкой, структурированием и визуализацией данных.
+          Мне близка работа, в которой можно соединить логику, аккуратность и удобство для людей.
+          Занимаюсь разработкой решений для обработки данных, автоматизации процессов и организации
+          информации в понятный и рабочий формат. Больше всего мне нравится, когда из разрозненных
+          данных и задач получается собрать цельную, удобную и действительно полезную систему.
         </div>
 
-        <div class="hero-contacts">
-          <a href="https://t.me/neechek" target="_blank">Telegram: @neechek</a>
-          <a href="mailto:vkorzova7@gmail.com">vkorzova7@gmail.com</a>
+        <div class="contact-row">
+          <a class="contact-chip" href="https://t.me/neechek" target="_blank">Telegram: @neechek</a>
+          <a class="contact-chip" href="mailto:vkorzova7@gmail.com">vkorzova7@gmail.com</a>
         </div>
       </div>
 
       <div class="content">
         <div class="section">
           <h2>Обо мне</h2>
-          <div class="about-box">
+          <div class="soft-box">
             <p>
-              Имею опыт работы с табличными данными, их очисткой, структурированием и подготовкой к дальнейшему анализу.
-              Также участвовала в разработке более крупных систем с интерфейсной частью, внутренней логикой,
-              уведомлениями и организацией рабочих процессов. Для меня важно создавать решения, которые не просто работают,
-              а действительно делают работу с данными и системой понятнее и удобнее.
+              У меня есть опыт как в работе с данными, так и в создании более крупных программных решений.
+              Мне интересно не просто написать что-то технически рабочее, а сделать так, чтобы системой
+              было удобно пользоваться и чтобы она действительно упрощала процессы. Работала с табличными
+              данными, их подготовкой и структурированием, а также участвовала в проектах, где были
+              интерфейс, внутренняя логика, уведомления и организация взаимодействия между разными частями системы.
             </p>
           </div>
         </div>
@@ -258,7 +260,7 @@
             <span class="tag">Обработка данных</span>
             <span class="tag">Автоматизация процессов</span>
             <span class="tag">Разработка приложений</span>
-            <span class="tag">Аналитическое мышление</span>
+            <span class="tag">Структурирование информации</span>
           </div>
         </div>
 
@@ -268,44 +270,46 @@
             <div class="project">
               <div class="project-title">DataPrep System</div>
               <p>
-                Приложение для загрузки, очистки, обработки и подготовки табличных данных для дальнейшего анализа.
-                Проект ориентирован на упрощение работы с данными и их приведение к удобному и структурированному виду.
+                Приложение для загрузки, очистки, обработки и подготовки табличных данных к дальнейшему анализу.
+                В этом проекте для меня было важно сделать работу с данными более понятной, аккуратной и удобной,
+                чтобы сократить ручную обработку и упростить подготовку информации.
               </p>
             </div>
 
             <div class="project">
               <div class="project-title">Система для организации</div>
               <p>
-                Комплексный проект, связанный с автоматизацией внутренних процессов организации. Включал систему
-                управления отелями, систему уведомлений и бонусную систему, а также работу с логикой взаимодействия
-                между отдельными модулями.
+                Один из крупных проектов, связанный с внутренними процессами организации. Включал систему
+                управления отелями, систему уведомлений и бонусную систему. Работа велась над логикой
+                взаимодействия модулей, структурой системы и тем, чтобы все элементы работали как единое решение.
               </p>
             </div>
 
             <div class="project">
               <div class="project-title">Финансовый трекер</div>
               <p>
-                Проект, направленный на обработку и анализ данных с удобной структурой информации, позволяющей
-                отслеживать основные показатели и упрощать работу с финансовыми данными.
+                Проект, направленный на организацию и анализ финансовых данных. Основная идея заключалась
+                в том, чтобы представить информацию в более удобном и понятном виде, упростить отслеживание
+                показателей и сделать работу с данными более наглядной.
               </p>
             </div>
           </div>
         </div>
 
         <div class="section">
-          <h2>Что могу предложить</h2>
-          <div class="strengths">
-            <div class="strength-item">
-              Подготовка и обработка данных для дальнейшего анализа и визуализации
+          <h2>Что мне особенно интересно</h2>
+          <div class="grid">
+            <div class="grid-item">
+              Находить понятный порядок в данных и превращать их в удобную рабочую систему
             </div>
-            <div class="strength-item">
-              Разработка удобных решений для автоматизации повседневных рабочих задач
+            <div class="grid-item">
+              Делать решения, которые не перегружены, но при этом реально полезны в работе
             </div>
-            <div class="strength-item">
-              Организация информации в понятную и структурированную систему
+            <div class="grid-item">
+              Соединять техническую часть, логику и удобство для пользователя
             </div>
-            <div class="strength-item">
-              Комбинирование технической части, логики и удобного пользовательского представления
+            <div class="grid-item">
+              Работать над проектами, где важны аккуратность, ответственность и внимание к деталям
             </div>
           </div>
         </div>
@@ -317,7 +321,7 @@
             Email: vkorzova7@gmail.com
           </p>
           <div class="footer-note">
-            Подробнее о моём опыте и проектах можно узнать по этой странице или через QR-код на визитке.
+            На этой странице кратко собрана информация обо мне, моих навыках и проектах.
           </div>
         </div>
       </div>
